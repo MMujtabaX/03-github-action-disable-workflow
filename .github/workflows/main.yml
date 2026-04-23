@@ -1,0 +1,15 @@
+# name -> event -> jobs -> runner -> steps
+
+name: Disable Workflow Demo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  diable-workflow: # job name
+    runs-on: ubuntu-latest # runner
+
+    steps:
+      - name: print meessage # name of step
+        run: echo "This workflow is disabled. Even after push, this won't get executed."
